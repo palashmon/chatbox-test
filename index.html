@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <title>ChatBox UI</title>
+  <meta name="viewport" content="width=device-width,shrink-to-fit=no,initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div>
+    <div class="container">
+      <div class="chat">
+        <header class="chat-header">
+          <div class="profile">
+            <div class="left">
+              <img src="img/arrow.png" class="arrow">
+              <img src="img/pp.png" class="pp">
+              <h2>John Doe</h2>
+            </div>
+            <div class="right">
+              <img src="img/video.png" class="icon">
+              <img src="img/phone.png" class="icon">
+              <img src="img/more.png" class="icon">
+            </div>
+          </div>
+        </header>
+        <div class="chat-box" id="chat-box">
+          <div class="chat-r">
+            <div class="sp"></div>
+            <div class="mess mess-r">
+              <p><img src="img/emoji-1.png" class="emoji">
+                              Hi, John
+              </p>
+              <div class="check">
+                <span>4:00 PM</span>
+                <img src="img/check-2.png">
+              </div>
+            </div>
+          </div>
+          <div class="chat-l">
+            <div class="mess">
+              <p>
+                              Oh! hi <img src="img/emoji-2.png" class="emoji">
+              </p>
+              <div class="check">
+                <span>4:00 PM</span>
+              </div>
+            </div>
+            <div class="sp"></div>
+          </div>
+
+          <div class="chat-r">
+            <div class="sp"></div>
+            <div class="mess mess-r">
+              <p>
+                             How are you doing?
+              </p>
+              <div class="check">
+                <span>4:00 PM</span>
+                <img src="img/check-2.png">
+              </div>
+            </div>
+          </div>
+          <div class="chat-l">
+            <div class="mess">
+                <p>I'm doing alright. How about you?</p>
+              <div class="check">
+                <span>4:00 PM</span>
+              </div>
+            </div>
+            <div class="sp"></div>
+          </div>
+        </div>
+
+        <footer class="chat-footer">
+          <form onsubmit="return false;" role="form">
+            <span>
+              <img src="img/emo.png" class="emo">
+            </span>
+            <div class="textarea">
+              <textarea aria-controls="chat-box" placeholder="Type a message" aria-label="Type a message" tabindex="0" spellcheck="false" rows="1" class="satisfi_textInput satisfi_textAreaInput" style="min-height: 35.4px; overflow: hidden;"></textarea>
+            </div>
+            <img src="img/mic.png" class="mic">
+          </form>
+
+        </footer>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
