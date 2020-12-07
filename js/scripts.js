@@ -8,10 +8,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   const textarea = document.querySelector("textarea");
+  const myContainer = document.querySelector(".container");
   textarea.addEventListener("focus", (event) => {
     let target = event.target;
     if (!target) return;
     cacheInput = event.target;
+
+    var displayHeight = window.innerHeight - myContainer.scrollTop;
+    myContainer.style.height = displayHeight + "px";
+  });
+
+  textarea.addEventListener("blur", (event) => {
+    myContainer.style.height = "100%";
   });
 
   document.addEventListener("touchend", function (event) {
