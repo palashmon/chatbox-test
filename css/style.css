@@ -46,7 +46,6 @@
 
   .chat-box {
     flex-grow: 1;
-    min-height: 2em !important;
     -webkit-overflow-scrolling: touch;
   }
 }
