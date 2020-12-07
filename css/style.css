@@ -27,13 +27,35 @@
   .container {
     width: 100% !important;
     height: 100%;
+    position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     border: 0;
-    position: fixed;
-    transform: translate3d(0, 0, 0);
+  }
+
+  .chat-header,
+  .chat-footer,
+  .chat-box {
+    position: absolute !important;
+    left: 0;
+    width: 100%;
+  }
+
+  .chat-header {
+    top: 0;
+  }
+
+  .chat-footer {
+    bottom: 0;
+  }
+
+  .chat-box {
+    top: var(--headerHeight);
+    bottom: 65px;
+    height: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
