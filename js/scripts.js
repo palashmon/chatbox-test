@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let target = event.target;
     if (!target) return;
     cacheInput = event.target;
+    document.body.scrollTop = 0;
   });
 
   document.addEventListener("touchend", function (event) {
