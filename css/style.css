@@ -4,13 +4,6 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
 .container {
   left: calc(50% - var(--chatWidth) / 2);
   top: auto;
@@ -31,46 +24,47 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .container,
-  .chat {
+  .container {
     width: 100% !important;
-    height: 100%;
-    position: fixed;
+    height: auto;
+    position: absolute;
     left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
     border: 0;
   }
 
-  .chat {
-    width: 100% !important;
-    height: 100%;
-  }
-
-  header.chat-header {
-    position: absolute;
-    top: 0;
+  .chat-header,
+  .chat-footer,
+  .chat-box {
+    position: absolute !important;
     left: 0;
     width: 100%;
-    z-index: 10;
+  }
+
+  .chat-header {
+    top: 0;
   }
 
   .chat-footer {
-    position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    z-index: 11;
   }
 
   .chat-box {
-    height: calc(100% - 1px);
-    width: 100%;
-    margin-top: var(--headerHeight);
-    margin-bottom: 60px;
-    z-index: 1;
-    overflow-y: scroll;
+    top: var(--headerHeight);
+    bottom: 65px;
+    height: auto !important;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .safari.keyboard .container {
+    bottom: 270px;
+  }
+
+  /*To prevent auto-zoom in Safari*/
+  .safari textarea {
+    font-size: 16px;
   }
 }
 
@@ -85,6 +79,7 @@ body {
   display: block;
   position: relative;
   height: var(--headerHeight);
+  z-index: 15;
 }
 .profile {
   width: 100%;
@@ -138,7 +133,6 @@ body {
   overflow: hidden;
   overflow-y: scroll;
   position: relative;
-  /* height: 500px; */
 }
 .chat-box .img_chat {
   width: 280px;
