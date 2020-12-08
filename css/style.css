@@ -58,11 +58,8 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  .safari .container {
-    height: 100%;
-  }
   .safari.keyboard .container {
-    height: var(--containerHeight);
+    height: calc(100% - 260px);
   }
 
   /*To prevent auto-zoom in Safari*/

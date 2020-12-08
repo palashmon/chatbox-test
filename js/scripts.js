@@ -9,13 +9,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   if (inputBox) {
     inputBox.addEventListener("focus", function (e) {
       document.body.classList.add("keyboard");
-      var displayHeight = window.innerHeight - myContainer.scrollTop;
       setTimeout(function () {
         window.scrollTo(0, 0);
-        document.documentElement.style.setProperty(
-          "--containerHeight",
-          displayHeight + "px"
-        );
       }, 200);
     });
 
