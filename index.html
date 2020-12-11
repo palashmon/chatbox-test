@@ -4,9 +4,12 @@
 	<meta charset="UTF-8">
   <title>ChatBox UI</title>
   <meta name="viewport" content="width=device-width,shrink-to-fit=no,initial-scale=1">
-	<link rel="stylesheet" href="css/style.css?v=012">
+	<link rel="stylesheet" href="css/style.css?v=014">
 </head>
-<body>
+<body tabindex="-1">
+
+  <div aria-hidden="true" style="position:absolute" tabindex="1"></div>
+
   <div>
     <div class="container">
       <div class="chat">
@@ -24,95 +27,107 @@
             </div>
           </div>
         </header>
-        <div class="chat-box" id="chat-box">
-          <div class="chat-r">
-            <div class="sp"></div>
-            <div class="mess mess-r">
-              <p><img src="img/emoji-1.png" class="emoji">
-                              Hi, John
-              </p>
-              <div class="check">
-                <span>4:00 PM</span>
-                <img src="img/check-2.png">
-              </div>
-            </div>
-          </div>
-          <div class="chat-l">
-            <div class="mess">
-              <p>
-                              Oh! hi <img src="img/emoji-2.png" class="emoji">
-              </p>
-              <div class="check">
-                <span>4:00 PM</span>
-              </div>
-            </div>
-            <div class="sp"></div>
-          </div>
+        <div class="chat-primary">
+          <div role="main" class="chat-primary-view">
+            <div class="chat-primary-view-contents">
+              <div class="chat-contents-container">
+                <div class="chat-primary-body">
+                  <div tabindex="0" style="position: absolute; width: 1px; height: 1px; outline: none; box-shadow: none; top: 0px;"></div>
+                  <div class="chat-box" id="chat-box">
+                    <div class="chat-r">
+                      <div class="sp"></div>
+                      <div class="mess mess-r">
+                        <p><img src="img/emoji-1.png" class="emoji">
+                                        Hi, John
+                        </p>
+                        <div class="check">
+                          <span>4:00 PM</span>
+                          <img src="img/check-2.png">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-l">
+                      <div class="mess">
+                        <p>
+                                        Oh! hi <img src="img/emoji-2.png" class="emoji">
+                        </p>
+                        <div class="check">
+                          <span>4:00 PM</span>
+                        </div>
+                      </div>
+                      <div class="sp"></div>
+                    </div>
 
-          <div class="chat-r">
-            <div class="sp"></div>
-            <div class="mess mess-r">
-              <p>
-                             How are you doing?
-              </p>
-              <div class="check">
-                <span>4:00 PM</span>
-                <img src="img/check-2.png">
-              </div>
-            </div>
-          </div>
-          <div class="chat-l">
-            <div class="mess">
-                <p>I'm doing alright. How about you?</p>
-              <div class="check">
-                <span>4:00 PM</span>
-              </div>
-            </div>
-            <div class="sp"></div>
-          </div>
+                    <div class="chat-r">
+                      <div class="sp"></div>
+                      <div class="mess mess-r">
+                        <p>
+                                       How are you doing?
+                        </p>
+                        <div class="check">
+                          <span>4:00 PM</span>
+                          <img src="img/check-2.png">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-l">
+                      <div class="mess">
+                          <p>I'm doing alright. How about you?</p>
+                        <div class="check">
+                          <span>4:00 PM</span>
+                        </div>
+                      </div>
+                      <div class="sp"></div>
+                    </div>
 
-          <div class="chat-r">
-            <div class="sp"></div>
-            <div class="mess mess-r">
-              <p><img src="img/emoji-1.png" class="emoji">
-                              Hi, John
-              </p>
-              <div class="check">
-                <span>4:00 PM</span>
-                <img src="img/check-2.png">
+                    <div class="chat-r">
+                      <div class="sp"></div>
+                      <div class="mess mess-r">
+                        <p><img src="img/emoji-1.png" class="emoji">
+                                        Hi, John
+                        </p>
+                        <div class="check">
+                          <span>4:00 PM</span>
+                          <img src="img/check-2.png">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-l">
+                      <div class="mess">
+                        <p>
+                                        Oh! hi <img src="img/emoji-2.png" class="emoji">
+                        </p>
+                        <div class="check">
+                          <span>4:00 PM</span>
+                        </div>
+                      </div>
+                      <div class="sp"></div>
+                    </div>
+                  </div>
+                  <div tabindex="0" style="position: absolute; width: 1px; height: 1px; outline: none; box-shadow: none; top: 0px;"></div>
+                </div>
+                <div class="chat-footer">
+                  <form onsubmit="return false;" role="form">
+                    <span>
+                      <img src="img/emo.png" class="emo">
+                    </span>
+                    <div class="textarea">
+                      <textarea aria-controls="chat-box" placeholder="Type a message" aria-label="Type a message" tabindex="0" spellcheck="false" rows="1" class="satisfi_textInput satisfi_textAreaInput" style="min-height: 35.4px; overflow: hidden;"></textarea>
+                    </div>
+                    <img src="img/mic.png" class="mic">
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="chat-l">
-            <div class="mess">
-              <p>
-                              Oh! hi <img src="img/emoji-2.png" class="emoji">
-              </p>
-              <div class="check">
-                <span>4:00 PM</span>
-              </div>
-            </div>
-            <div class="sp"></div>
           </div>
         </div>
 
-        <footer class="chat-footer">
-          <form onsubmit="return false;" role="form">
-            <span>
-              <img src="img/emo.png" class="emo">
-            </span>
-            <div class="textarea">
-              <textarea aria-controls="chat-box" placeholder="Type a message" aria-label="Type a message" tabindex="0" spellcheck="false" rows="1" class="satisfi_textInput satisfi_textAreaInput" style="min-height: 35.4px; overflow: hidden;"></textarea>
-            </div>
-            <img src="img/mic.png" class="mic">
-          </form>
-
-        </footer>
       </div>
     </div>
   </div>
 
 
   <script src="js/scripts.js?v=012"></script>
+  <div aria-hidden="true" style="position:absolute" tabindex="0"></div>
 </body>
 </html>
